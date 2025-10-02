@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+}
+
+.p-password-input {
+ 	width: 100%!important;
+ }
+
+ .p-password {
+    display: inherit!important;
+ }
+
+ .link-text {
+    font-size: small;
+    color: #aaaae2;
+    cursor: pointer;
+ }
+
+ .p-toolbar {
+    border: 0px;
+    border-bottom: 1px solid #424242;
+    border-radius: 0px;
+ }
