@@ -21,3 +21,8 @@ body {
     border-bottom: 1px solid #424242;
     border-radius: 0px;
  }
+
+ .error-message {
+   color: red;
+   font-size: small;
+ }

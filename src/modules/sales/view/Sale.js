@@ -1,5 +1,4 @@
 import { HeaderBar } from "../../../components/HeaderBar"
-import { Card } from "primereact/card"
 
 export const Sale = () => {
 
