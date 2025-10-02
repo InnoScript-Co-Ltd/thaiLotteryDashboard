@@ -34,8 +34,6 @@ export const keys = {
   PERMISSION: "PERMISSION",
   ROLE: "ROLE",
   LANGUAGE: "LANGUAGE",
-  DOP_TOKEN:
-    "dop_v1_7ab50f39a6848077b1f49c742b99f20768705ab47f4325581b3e039270a19abc",
 };
 
 // export const bankTypes = [
