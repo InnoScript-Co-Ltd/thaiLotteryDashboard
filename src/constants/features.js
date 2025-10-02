@@ -50,10 +50,10 @@ export const features = [
         link: "/employees"
     },
     {
-        name: "User",
+        name: "Reseller",
         icon: "pi pi-user",
-        description: "Manage user accounts and permissions.",
-        link: "/user"
+        description: "Manage reseller accounts and permissions.",
+        link: paths.RESELLER_LIST
     },
     {
         name: "Settings",

@@ -36,7 +36,7 @@ export const postRequest = async (path, payload, dispatch) => {
     const result = await http.post(path, payload);
     return httpResponseHandler(result);
   } catch (error) {
-    return httpErrorHandler(dispatch, error);
+    return httpErrorHandler(error, dispatch);
   }
 };
 

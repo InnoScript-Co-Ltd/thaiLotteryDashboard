@@ -49,6 +49,10 @@ export const httpErrorHandler = async (error, dispatch) => {
             detail: data.message,
         }))
     }
+
+    if(status === 401) {
+      window.location.replace("/login");
+    }
   
   return error;
 };

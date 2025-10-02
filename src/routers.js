@@ -10,6 +10,7 @@ import { Layout } from "./Layout";
 import { homeRoutes } from "./modules/home/homeRoutes";
 import { saleRoutes } from "./modules/sales/salueRoutes";
 import { customerRoutes } from "./modules/customer/customerRoutes";
+import { resellerRoutes } from "./modules/reseller/resellerRoutes";
 
 export const routers = createBrowserRouter([
     {
@@ -20,7 +21,8 @@ export const routers = createBrowserRouter([
             ...dashboardRoutes,
             ...userRoutes,
             ...saleRoutes,
-            ...customerRoutes
+            ...customerRoutes,
+            ...resellerRoutes
         ]
     },
     {

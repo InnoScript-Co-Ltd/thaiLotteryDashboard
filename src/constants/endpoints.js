@@ -5,6 +5,7 @@ export const baseURL = env[0];
 export const endpoints = {
   login: "auth/login",
   admin: "auth",
+  reseller: "user",
   agent: "agent",
   agentBankAccount: "agent-bank-account",
   package: "package",
