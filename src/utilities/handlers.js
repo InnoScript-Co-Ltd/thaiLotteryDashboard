@@ -1,4 +1,3 @@
-
 import { updateError, updateNotification } from "../modules/shareSlice";
 
 /**
@@ -51,6 +50,7 @@ export const httpErrorHandler = async (error, dispatch) => {
     }
 
     if(status === 401) {
+      localStorage.clear();
       window.location.replace("/login");
     }
   

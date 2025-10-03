@@ -5,7 +5,21 @@ export const resellerPayloads = {
         first_name: "",
         last_name: "",
         phone: "",
+        gender: { name: 'MALE', code: 'FEMALE' },
+        password: "",
+        status: { name: "PENDING", code: "PENDING" }
+    },
+
+    update: {
+        first_name: "",
+        last_name: "",
+        profile: "",
+        phone: "",
         gender: "",
+        nrc: "",
+        nrc_front: "",
+        nrc_back: "",
+        address: "", 
         password: "",
         status: ""
     },

@@ -65,12 +65,12 @@ export const formBuilderRequest = async (path, payload) => {
  * @param {*} payload
  * @returns
  */
-export const putRequest = async (path, payload) => {
+export const putRequest = async (path, payload, dispatch) => {
   try {
     const result = await http.put(path, payload);
     return httpResponseHandler(result);
   } catch (error) {
-    return httpErrorHandler(error);
+    return httpErrorHandler(error, dispatch);
   }
 };
 
