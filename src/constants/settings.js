@@ -105,34 +105,15 @@ export const notificationOptions = {
 };
 
 export const statusOptions = [
-  { status: "ACTIVE", color: "chip-success" },
-  { status: "FULL_KYC", color: "chip-success" },
-  { status: "DISABLE", color: "chip-default" },
-  { status: "DELETED", color: "chip-info" },
-  { status: "PENDING", color: "chip-warn" },
-  { status: "CHECKING", color: "chip-warn" },
-  { status: "BLOCK", color: "chip-danger" },
-  { status: "COMPLETE", color: "chip-success" },
-  { status: "MEMBER_WALLET", color: "chip-success" },
-  { status: "CASH", color: "chip-info" },
-  { status: "ONLINE_PAYMENT", color: "chip-warn" },
-  { status: "AVAILABLE_WITHDRAW", color: "chip-warn" },
-  { status: "TRANSFER_SUCCESS", color: "chip-success" },
-  { status: "DEPOSIT_PENDING", color: "chip-warn" },
-  { status: "DEPOSIT_PAYMENT_ACCEPTED", color: "chip-success" },
+  { status: "ACTIVE", color: "success" },
+  { status: "DISABLE", color: "danger" },
+  { status: "DELETED", color: "danger" },
+  { status: "PENDING", color: "warning" },
 ];
 
 export const tooltipOptions = {
   position: "top",
 };
-
-export const auditColumns = [
-  { field: "created_by", header: "Created By" },
-  { field: "updated_by", header: "Updated By" },
-  { field: "created_at", header: "Created At" },
-  { field: "updated_at", header: "Updated At" },
-  { field: "deleted_at", header: "Deleted At" },
-];
 
 export const responsiveOptions = [
   {

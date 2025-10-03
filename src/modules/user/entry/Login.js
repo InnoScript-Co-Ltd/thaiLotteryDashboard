@@ -4,7 +4,7 @@ import { InputText } from 'primereact/inputtext'
 import { Password } from "primereact/password"
 import { useNavigate } from "react-router-dom"
 import { paths } from "../../../constants/path"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { payloadHandler } from "../../../utilities/handlers"
 import { userPayloads } from "../userPayloads"
 import { postRequest } from "../../../utilities/api"
@@ -33,6 +33,14 @@ export const Login = () => {
         }
         setLoading(false);
     }
+
+    useEffect(() => {
+        const token = localStorage.getItem(keys.API_TOKEN) ? localStorage.getItem(keys.API_TOKEN) : null;
+
+        if(token) {
+            navigate(paths.HOME);
+        }
+    },[navigate]);
 
     return(
         <div className="flex align-items-center justify-content-center min-h-screen bg-gray-900">

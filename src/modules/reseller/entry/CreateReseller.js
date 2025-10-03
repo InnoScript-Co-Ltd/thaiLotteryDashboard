@@ -13,6 +13,7 @@ import { useDispatch } from "react-redux"
 import { ValidationMessage } from "../../../components/ValidationMessage"
 import { Dropdown } from "primereact/dropdown"
 import { updateError } from "../../shareSlice"
+import { BackButton } from "../../../components/BackButton";
 
 export const CreateReseller = () => {
 
@@ -54,14 +55,7 @@ export const CreateReseller = () => {
             <HeaderBar />
             
             <div className="w-full mt-3 p-3">
-                <div className="w-full">
-                    <Button
-                        size="small"
-                        icon="pi pi-arrow-left" 
-                        outlined
-                        onClick={() => navigate(-1)}
-                    />
-                </div>
+                <BackButton />
 
                 <Card 
                     className="mt-3"

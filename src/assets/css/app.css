@@ -26,3 +26,7 @@ body {
    color: red;
    font-size: small;
  }
+
+.table-column {
+   font-size: small;
+}
