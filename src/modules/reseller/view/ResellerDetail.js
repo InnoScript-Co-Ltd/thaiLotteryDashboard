@@ -8,6 +8,8 @@ import { UpdateReseller } from "../entry/UpdateReseller";
 import { useDispatch } from "react-redux";
 import { useCallback, useEffect } from "react";
 import { resellerServices } from "../resellerServices";
+import { ResetPassword } from "../entry/ResetPassword";
+import { Divider } from 'primereact/divider';
 
 export const ResellerDetail = () => {
 
@@ -44,7 +46,12 @@ export const ResellerDetail = () => {
                 <TabView>
                     <TabPanel header="Reseller Account Information">
                         <UpdateReseller />
+                        <Divider />
+                        <ResetPassword />
                     </TabPanel>
+
+                    <TabPanel header="Tickets"></TabPanel>
+                    <TabPanel header="Customers"></TabPanel>
                 </TabView>
             </div>
         </>

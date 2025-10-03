@@ -25,6 +25,11 @@ export const resellerServices = {
             dispatch(show(response.data));
         }
         return response;
+    },
+
+    resetPassword: async (dispatch, id, password) => {
+        const response = await putRequest(`${endpoints.reseller}/${id}`, { password: password}, dispatch);
+        return response;
     }
 
 }

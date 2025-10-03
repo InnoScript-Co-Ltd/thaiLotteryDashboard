@@ -30,3 +30,20 @@ body {
 .table-column {
    font-size: small;
 }
+
+.img-circle, .img-circle > img {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%!important;
+}
+
+.p-image  > img {
+   width: 100%!important;
+}
+
+.form-header {
+   font-size: large;
+   font-weight: bold;
+   margin-top: 15px;
+   margin-bottom: 15px;
+}

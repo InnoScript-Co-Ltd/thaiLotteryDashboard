@@ -27,6 +27,7 @@ const shareSlice = createSlice({
 
     updateError: (state, action) => {
         const errors =  { ...action.payload };
+        console.log(errors);
         state.errors = errors.errors;
         return state;
     },

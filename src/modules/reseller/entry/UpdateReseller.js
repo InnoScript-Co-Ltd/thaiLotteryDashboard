@@ -9,6 +9,8 @@ import { Button } from "primereact/button"
 import { Image } from "primereact/image"
 import { resellerServices } from "../resellerServices"
 import { useParams } from "react-router-dom"
+import { Rating } from 'primereact/rating';
+import { Tag } from 'primereact/tag';
 
 const genderList = [
   { name: "MALE", code: "MALE" },
@@ -58,20 +60,66 @@ export const UpdateReseller = () => {
 
     return(
         <>
-            { payload && (
+            { payload && reseller && (
                 <div className="grid">
                     <div className="col-3 mt-3">
-                        <div className="w-full flex flex-row justify-content-center align-items-center">
+                        <div className="w-full flex flex-column justify-content-center align-items-center">
                             <Image 
-                                src="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp"
+                                className="img-circle"
+                                src="https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU"
                             />
+
+                            <div className="w-full flex flex-row justify-content-between align-items-center p-3">
+                                <label className="mr-3"> Rate </label>
+                                <Rating value={5} readOnly cancel={false} />
+                            </div>
+
+                            <div className="w-full flex flex-row justify-content-between align-items-center p-3">
+                                <label className="mr-3"> Level </label>
+                                <Tag severity={"success"} value={"Level 1"} />
+                            </div>
+
+                            <div className="w-full flex flex-row justify-content-between align-items-center p-3">
+                                <label className="mr-3"> Remaining Ticket </label>
+                                <span> 300 </span>
+                            </div>
+
+                            <div className="w-full flex flex-row justify-content-between align-items-center p-3">
+                                <label className="mr-3"> Total Ticket Usage </label>
+                                <span> 4,000 </span>
+                            </div>
+
+                            <div className="w-full flex flex-row justify-content-between align-items-center p-3">
+                                <label className="mr-3"> Ticket Rate </label>
+                                <span> 0.8 Baht </span>
+                            </div>
+
+                            <div className="w-full flex flex-row justify-content-between align-items-center p-3">
+                                <label className="mr-3"> Remaining Amount </label>
+                                <span> {0.8 * 300 } Baht </span>
+                            </div>
+
+                            <div className="w-full flex flex-row justify-content-between align-items-center p-3">
+                                <label className="mr-3"> Join Date </label>
+                                <span> {new Date(reseller.created_at).toLocaleString()} </span>
+                            </div>
+
+                            <div className="w-full flex flex-row justify-content-between align-items-center p-3">
+                                <label className="mr-3"> Updated Date </label>
+                                <span> {new Date(reseller.updated_at).toLocaleString()} </span>
+                            </div>
+
+                            <div className="w-full flex flex-row justify-content-between align-items-center p-3">
+                                <label className="mr-3"> Account Status </label>
+                                <Tag severity={"success"} value={reseller.status} />
+                            </div>
                         </div>
                     </div>
 
                     <div className="col-9">
                         <div className="grid">
-                            <div className="col-12">
-                                <h2> Update Reseller Account Information </h2>
+                            <div className="col-12 mt-3">
+                                <label className="form-header"> Update Reseller Account Information </label>
                             </div>
 
                             <div className="col-3 md:col-3 mt-3">
@@ -198,6 +246,20 @@ export const UpdateReseller = () => {
                                     />
                                 </div>
                                 <ValidationMessage field="address" />
+                            </div>
+
+                            <div className="col-6 mt-3">
+                                <Image
+                                    src="https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU"
+                                    preview
+                                />
+                            </div>
+
+                            <div className="col-6 mt-3">
+                                <Image
+                                    src="https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU"
+                                    preview
+                                />
                             </div>
 
                             <div className="col-12 mt-3">
